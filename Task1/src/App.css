@@ -1,0 +1,120 @@
+.cart-image {
+  width: 100px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: 0.3s ease, 0.3s ease;
+  cursor: pointer;
+}
+
+.cart-image:hover {
+  transform: scale(1.3);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+body {
+  background-color: rgba(239, 245, 245, 0.511);
+  color: rgb(0, 0, 0);
+}
+
+
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 50px;
+}
+
+.cart-image {
+  width: 300%;
+  height: auto;
+}
+
+
+.move-animation {
+  animation: move 0.5s ease-in-out forwards;
+}
+
+@keyframes move {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+}
+
+
+
+.navigation-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 10px;
+  background-color: #333;
+}
+
+.navigation-links a {
+  color: white;
+  text-decoration: none;
+  margin: 5px;
+}
+
+@media screen and (max-width: 767px) {
+  .navigation-links {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+
+
+
+
+.navigation-links {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  background-color: #333;
+}
+
+.navigation-links .desktop-links {
+  display: flex;
+}
+
+.navigation-links .desktop-links a {
+  color: white;
+  text-decoration: none;
+  margin: 5px;
+}
+
+.burger-icon {
+  display: none;
+  color: white;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 767px) {
+  .burger-icon {
+    display: block;
+  }
+
+  .navigation-links .desktop-links {
+    display: none;
+  }
+
+  .mobile-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .mobile-menu a {
+    color: white;
+    text-decoration: none;
+    margin: 5px;
+  }
+}
